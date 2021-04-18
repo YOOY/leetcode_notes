@@ -1,3 +1,7 @@
+# heapq will prioritize the value we put in
+# by giving it a tuple, heapq will compare the first item then second...etc
+# with this, we can always get the smallest item from it
+
 import heapq
 
 # Definition for singly-linked list.

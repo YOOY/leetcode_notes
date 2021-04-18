@@ -1,3 +1,8 @@
+# sort and unify the list
+# find the index of 1
+# if not found return 1
+# since the list is unify and sorted, the list[index] should be index + 1 (i.e. a[0] = 1)
+
 def firstMissingPositive(nums):
     nums = sorted(list(set(nums)))
     try:
