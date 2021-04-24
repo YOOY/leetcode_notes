@@ -6,7 +6,7 @@ def nextPermutation(nums):
     Do not return anything, modify nums in-place instead.
     """
     length = len(nums)
-    clean = False
+    clean = True
     index_a = index_b = 0
     for i in range(length-1, 0, -1):
         if nums[i] > nums[i-1]:
