@@ -39,7 +39,7 @@ def divide_bit_operation(dividend, divisor):
         i = 0
         while dividend > divisor << (i+1):
             i += 1
-        count += (2 ** i)
+        count += (1 << i)
         dividend -= (divisor << i)
     if not positive:
         count = 0 - count
