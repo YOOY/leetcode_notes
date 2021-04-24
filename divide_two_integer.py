@@ -11,6 +11,7 @@ def divide(dividend, divisor):
     while dividend >= divisor:
         sum = divisor
         rep = 1
+        # to double divisor
         while dividend > sum + sum:
             sum += sum
             rep += rep
