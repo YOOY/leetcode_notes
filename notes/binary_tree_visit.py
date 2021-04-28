@@ -44,7 +44,7 @@ n.left.left = Node(n=1)
 n.left.right = Node(n=3)
 n.right.left = Node(n=4)
 n.right.right = Node(n=5)
-
+print("origin tree:\n     2\n  8    9\n 1 3  4 5")
 print(f"level order result: {level_order_visit(n)}")
 print(f"pre-order result: {preorder_visit(n)}")
 print(f"in-order result: {inorder_visit(n)}")
