@@ -1,3 +1,4 @@
+# https://www.youtube.com/watch?time_continue=122&v=fEcyKrdIkho
 # for a 3 * 7 matrix
 # the first row are always 1 way
 # the a[1][0] still 1

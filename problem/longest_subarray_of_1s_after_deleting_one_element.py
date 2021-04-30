@@ -14,7 +14,6 @@ def longestSubarray(nums):
         return nums_length - 1
     if zero_length == nums_length:
         return max_length
-    #print(zero_index)
     for index in range(zero_length):
         if index == 0:
             max_length = max(max_length, zero_index[index+1] - 1)
@@ -22,7 +21,30 @@ def longestSubarray(nums):
             max_length = max(max_length, nums_length - zero_index[index-1] - 2)
         else:
             max_length = max(max_length, zero_index[index+1] - zero_index[index-1] - 2)
-        #print(f"{zero_index[index]} / {max_length}")
     return max_length
 
+
+# count 1 until meet 0 and add count to array
+# reset count and redo step 1
+# sum array[i] + array[i+1] to get max length
+def longestSubarray_v2(nums):
+    ones = []
+    count = 0
+    for i in nums:
+        if i == 1:
+            count += 1
+        else:
+            ones.append(count)
+            count = 0
+    ones.append(count)
+    if len(ones) == 1:
+        return ones[0] - 1
+    max_length = ones[0]
+    for i in range(len(ones)-1):
+        max_length = max(max_length, ones[i] + ones[i+1])
+
+    return max_length
+
+
 print(longestSubarray([0,1,1,1,0,1,1,0,1]))
+print(longestSubarray_v2([0,1,1,1,0,1,1,0,1]))

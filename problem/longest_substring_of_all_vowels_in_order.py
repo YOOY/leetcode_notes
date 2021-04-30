@@ -1,24 +1,12 @@
 def longestBeautifulSubstring(word):
-    target = 'aeiou'
-    max_match = 0
-    count = 0
-    index = 0
-    for i in word:
-        #print(f"i {i} / count {count}/index {target[index]}")
-        if i == target[index]:
-            count += 1
-        elif index < len(target) -1 and i == target[index+1] and count != 0:
-            index += 1
-            count += 1
-        else:
-            if index == len(target) - 1:
-                max_match = max(count, max_match)
-            index = 0
-            count = 0
-            if i == target[index]:
-                count += 1
-    if index == len(target) - 1:
-        max_match = max(count, max_match)
-    return max_match
+    ans = 0
+    cnt = unique = 1
+    for i in range(1, len(word)): 
+        if word[i-1] <= word[i]: 
+            cnt += 1
+            if word[i-1] < word[i]: unique += 1
+        else: cnt = unique = 1
+        if unique == 5: ans = max(ans, cnt)
+    return ans 
 
-print(longestBeautifulSubstring("aeiaaioaaaaeiiiiouuuooaauuaeiu"))
+print(longestBeautifulSubstring("aeu"))
