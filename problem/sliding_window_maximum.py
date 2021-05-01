@@ -1,3 +1,5 @@
+# always keep the largest one among nums[0:index]
+# index is the sliding window maxium index
 def maxSlidingWindow(nums, k):
     result = []
     queue = deque()
