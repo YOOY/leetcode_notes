@@ -1,3 +1,5 @@
+# push procdess time and index for those enqueue time is qualify
+
 import heapq
 def getOrder(tasks):
     result = []
