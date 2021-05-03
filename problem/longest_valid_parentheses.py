@@ -12,7 +12,7 @@ def longestValidParentheses(s):
             stack.append(i)
         else:
             if not stack:
-                next
+                continue
             else:
                 index = stack.pop()
                 a[i] = '1'
