@@ -8,4 +8,4 @@ def merge(intervals):
             result[-1] = [min(result[-1][0], i[0]), max(result[-1][1], i[1])]
     return result
 
-print(merge([[1,4],[0,0]]))
+print(merge([[1,4],[0,0],[2,5]]))
