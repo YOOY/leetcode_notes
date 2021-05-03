@@ -1,6 +1,13 @@
+# XOR
+# 0 ^ 0 = 0
+# 0 ^ 1 = 1
+# 1 ^ 0 = 1
+# 1 ^ 1 = 0
 # max number is 2 ** maximumBit -1
-# X ^ k = max_number
-# k = X ^ max_number
+# xor ^ k = mx
+# xor ^ xor ^ k = xor ^ mx
+# 0 ^ k = xor ^ mx
+# k = xor ^ mx
 
 def getMaximumXor(nums, maximumBit):
     result = []
