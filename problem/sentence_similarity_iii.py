@@ -6,7 +6,7 @@
 
 def areSentencesSimilar(sentence1, sentence2):
     if len(sentence1) > len(sentence2):
-        return areSentencesSimilar(sentence2, sentence1)
+        sentence1, sentence2 = sentence2, sentence1
     words1, words2 = sentence1.split(' '), sentence2.split(' ')
     l = 0
     r = -1
