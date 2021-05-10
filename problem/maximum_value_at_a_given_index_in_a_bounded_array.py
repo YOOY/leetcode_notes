@@ -1,3 +1,7 @@
+# n = 6, index = 1, sum = 10
+# [1,1,1,1,1,1]
+# [1,2,1,1,1,1]
+# [2,3,2,1,1,1]
 def maxValue(n, index, maxSum):
     maxSum -= n
     ans = 1
