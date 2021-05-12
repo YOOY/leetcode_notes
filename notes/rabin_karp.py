@@ -11,11 +11,15 @@ def rabin_karp(s, p):
     for i in range(length_p):
         hash_p = (hash_p * base + ord(p[i])) % mod
         rolling_hash = (rolling_hash * base + ord(s[i])) % mod
+    if hash_p == rolling_hash:
+        result[s[0:length_p]] += 1
     for i in range(length_s - length_p):
         rolling_hash -= (ord(s[i]) * (base**(length_p-1))) % mod
         rolling_hash = (rolling_hash * base + ord(s[i+length_p])) % mod
         if rolling_hash == hash_p:
-            result[s[i+1:i+length_p+1]] += 1
+            candidate = s[i+1:i+length_p+1]
+            if candidate == p:
+                result[candidate] += 1
     print(result)
 
 
