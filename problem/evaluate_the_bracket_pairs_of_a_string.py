@@ -22,4 +22,4 @@ def evaluate(s, knowledge):
             result += i
     return result
 
-print(evaluate("(name)is(age)yearsold", [["name","bob"],["age","two"]]))
+print(evaluate("(name)is(age)year(so)ld", [["name","bob"],["age","two"]]))
