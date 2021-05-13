@@ -14,4 +14,4 @@ def countAndSay(n):
     print(f"string is {string} / n = {n} / result = {result}")
     return result
 
-print(countAndSay(3))
+print(countAndSay(10))
