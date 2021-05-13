@@ -23,7 +23,7 @@ def threeSum(nums):
                 result.append([nums[l], nums[m], nums[r]])
                 m += 1
                 r -= 1
-                while m < r and nums[m] == nums[m-11]:
+                while m < r and nums[m] == nums[m-1]:
                     m += 1
                 while r > m and nums[r] == nums[r+1]:
                     r -= 1
