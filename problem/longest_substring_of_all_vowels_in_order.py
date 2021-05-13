@@ -9,4 +9,4 @@ def longestBeautifulSubstring(word):
         if unique == 5: ans = max(ans, cnt)
     return ans 
 
-print(longestBeautifulSubstring("aeu"))
+print(longestBeautifulSubstring("ieaaaaaeiiiaeiou"))

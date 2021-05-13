@@ -21,4 +21,4 @@ def longestValidParentheses(s):
     longest = max(''.join(a).split('0')).count('1')
     return longest
 
-print(longestValidParentheses("()(()"))
+print(longestValidParentheses("()((()())"))

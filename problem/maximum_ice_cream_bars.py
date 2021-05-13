@@ -11,4 +11,14 @@ def maxIceCream(costs, coins):
             break
     return count
 
+
+def maxIceCream_v2(costs, coins):
+    sums = 0
+    costs = sorted(costs)
+    for index in range(len(costs)):
+        if sums + costs[i] <= coins:
+            sums += costs[i]
+        elif sums + costs[i] > coins:
+            return i + 1
+
 print(maxIceCream([1,3,2,4,1], 7))
