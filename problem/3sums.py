@@ -29,4 +29,4 @@ def threeSum(nums):
                     r -= 1
     return result
 
-print(threeSum([0,0,0]))
+print(threeSum([1,3,5,7,0,-1,-3,-7]))
