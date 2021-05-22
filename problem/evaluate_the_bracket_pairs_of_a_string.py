@@ -1,11 +1,11 @@
 from collections import defaultdict
-def constant_factory():
-    return lambda: '?'
+def default_value():
+    return '?'
 def evaluate(s, knowledge):
     key = ""
     result = ""
     keyword = False
-    knowledges = defaultdict(constant_factory())
+    knowledges = defaultdict(default_value)
     for i in knowledge:
         knowledges[i[0]] = i[1]
     
